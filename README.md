@@ -21,6 +21,17 @@ Package manager is **pnpm** (v11)
 - `src/styles/global.css`: all styling (nlbs tokens, fibonacci spacing, AstroLinkHub layout metric)
 - `public/sprite.svg`: icon sprite, `links[].icon` references symbol id here
 
+## Icons
+
+All icons in `public/sprite.svg` are fetch from [Iconify](https://iconify.design) (`api.iconify.design`), serve from open-source icon sets:
+
+| Icon                                               | Set                                                                                                       | License            |
+| :------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :----------------- |
+| codeberg, discord, github, kofi, spotify, telegram | [simple-icons](https://simpleicons.org)                                                                   | CC0 1.0            |
+| garden                                             | [Phosphor Icons](https://phosphoricons.com) (`ph:plant`)                                                  | MIT                |
+| mail                                               | [Material Symbols](https://fonts.google.com/icons) (`material-symbols:mail`)                              | Apache License 2.0 |
+| nanoo                                              | Nanoo Labs brand mark from [nanoolabs/changelog](https://github.com/nanoolabs/changelog) (not on Iconify) | Nanoo Labs         |
+
 ## Acknowledgments
 
 Thanks for:
