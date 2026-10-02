@@ -11,7 +11,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/jetbrains-mono": "^5.2.8",
     "@nlbs/css": "1.0.0",
     "astro": "^6.1.7"
   },

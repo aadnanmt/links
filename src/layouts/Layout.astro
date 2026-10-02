@@ -1,6 +1,5 @@
 ---
-import '@fontsource/jetbrains-mono/400.css'
-import '@fontsource/jetbrains-mono/500.css'
+import { Font } from 'astro:assets'
 // @nlbs/css first so our global.css overrides win the cascade
 import '@nlbs/css'
 import '../styles/global.css'
@@ -19,6 +18,8 @@ const { title, description, url } = Astro.props
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <Font cssVariable="--font-sans" preload />
+    <Font cssVariable="--font-mono" preload />
     <!-- FAVICON WIP: still in development
     <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
     <meta name="generator" content={Astro.generator} />

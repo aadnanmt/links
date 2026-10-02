@@ -19,7 +19,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'JetBrains Mono', monospace;
 }
 
 body {
@@ -27,13 +26,15 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 2rem 0;
+  font-family: var(--font-sans);
+  font-size: 1rem; /* 16px base, rem follows the user browser setting */
   background: linear-gradient(
     180deg,
     var(--color-bg),
     color-mix(in oklab, var(--color-bg), var(--color-accent-violet) 8%)
   );
   color: var(--color-text);
-  line-height: 1.618; /* golden ratio  */
+  line-height: 1.618; /* golden ratio, inside the 1.4-1.7 comfortable reading range */
 }
 
 .container {
@@ -64,15 +65,17 @@ body {
 }
 
 .name {
+  font-family: var(--font-mono);
   font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  line-height: 1.2; /* display text stay tight, not the body rhythm */
+  letter-spacing: 0.05em; /* relative, scale with font-size (was a fixed 2px) */
   margin-bottom: var(--s1); /* 8px */
 }
 
 .bio {
   color: var(--color-text);
-  letter-spacing: 2.5px;
+  letter-spacing: 0.02em; /* body copy, wide tracking hurt word shape (was 2.5px = 0.14em) */
   font-size: 1.1rem;
   font-weight: 400;
   text-wrap: pretty;
