@@ -35,6 +35,7 @@ export type IconId =
   | 'garden'
   | 'kofi'
   | 'nanoo'
+  | 'roblox'
 
 export const siteConfig: SiteConfig = {
   seo: {
@@ -55,7 +56,7 @@ export const siteConfig: SiteConfig = {
       url: 'https://codeberg.org/aadnanmt',
       icon: 'codeberg',
     },
-    { name: 'Telegram', url: 'https://t.me/aadnnmt', icon: 'telegram' },
+    { name: 'Telegram', url: 'https://t.me/adnnmt', icon: 'telegram' },
     {
       name: 'Discord',
       url: 'https://discord.com/users/1155470881183760525',
@@ -74,14 +75,19 @@ export const siteConfig: SiteConfig = {
       icon: 'garden',
     },
     {
+      name: 'Check My Niri Dotfiles',
+      url: 'https://github.com/aadnanmt/niri-dotfiles',
+      icon: 'github',
+    },
+    {
       name: 'Nanoo Labs on Github',
       url: 'https://github.com/nanoolabs',
       icon: 'nanoo',
     },
     {
-      name: 'Check My Niri Dotfiles',
-      url: 'https://github.com/aadnanmt/niri-dotfiles',
-      icon: 'github',
+      name: 'Play Roblox With Me',
+      url: 'https://www.roblox.com/share?code=79ca89d40350d64385b3b697582c5be3&type=Profile&source=ProfileShare&stamp=1790935992778',
+      icon: 'roblox',
     },
     {
       name: 'Support Me on Ko-fi',
