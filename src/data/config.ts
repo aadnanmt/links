@@ -79,6 +79,11 @@ export const siteConfig: SiteConfig = {
       icon: 'nanoo',
     },
     {
+      name: 'Check My Niri Dotfiles',
+      url: 'https://github.com/aadnanmt/niri-dotfiles',
+      icon: 'github',
+    },
+    {
       name: 'Support Me on Ko-fi',
       url: 'https://ko-fi.com/aadnanmt',
       icon: 'kofi',
