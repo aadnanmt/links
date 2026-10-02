@@ -1,3 +1,6 @@
 allowBuilds:
   esbuild: true
   sharp: true
+  # false: workerd binary only used by local wrangler (SSR preview),
+  # and static local build and CF builds never run it
+  workerd: false
