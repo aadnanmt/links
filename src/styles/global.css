@@ -1,6 +1,10 @@
 :root {
-  /* color tokens: @nlbs/css v1.0.0 dark theme (--color-*), import in Layout.astro. Yeahh, never hand-pick hex here. */
-  /* shadow: nlbs ships no shadow tokens, ours are black-base oklch layers   */
+  /* color tokens: @nlbs/css v1.0.0 dark theme (--color-*),
+* import in Layout.astro.
+* Yeahh, never hand-pick hex here. */
+
+  /* shadow: nlbs ships no shadow tokens,
+* ours are black-base oklch layers   */
   --shadow-lift: oklch(0 0 0 / 0.25) 0 8px 16px;
   --shadow-credit:
     oklch(0 0 0 / 0.2) 0 3px 5px -1px, oklch(0 0 0 / 0.14) 0 6px 10px,
@@ -105,7 +109,7 @@ body {
   background: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: 6px;
-  padding: 12px var(--s3); /* 24px | 12px vert: row lands on the ~44px touch target minimum */
+  padding: 18px var(--s3); /* 24px | 18px vert: row lands on the ~44px touch target minimum */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,6 +117,7 @@ body {
   text-align: center;
   text-decoration: none;
   color: var(--color-text);
+  font-weight: 700;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); /* ALH ease-out, fast then slow */
   user-select: none;
   touch-action: manipulation;
@@ -125,14 +130,16 @@ body {
   text-overflow: ellipsis;
 }
 
-.link:hover {
+.link:hover,
+.nowplaying:hover {
   border-color: var(--color-border-strong);
   background: var(--color-bg-muted);
   box-shadow: var(--shadow-lift);
   transform: translateY(-2px);
 }
 
-.link:active {
+.link:active,
+.nowplaying:active {
   box-shadow: none;
   transform: translateY(0);
 }
@@ -145,6 +152,7 @@ body {
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: var(--s2);
   margin-bottom: var(--s3); /* 24px, section rhythm */
@@ -184,6 +192,7 @@ body {
   background: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); /* ALH ease, same as .link */
 }
 
 .np-art {
@@ -272,7 +281,7 @@ body {
 
 .np-track {
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700; /* bold, same weight as .link label */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
