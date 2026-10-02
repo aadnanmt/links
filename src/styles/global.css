@@ -1,0 +1,189 @@
+:root {
+  /* color tokens: @nlbs/css v1.0.0 dark theme (--color-*), import in Layout.astro. Yeahh, never hand-pick hex here. */
+  /* shadow: nlbs ships no shadow tokens, ours are black-base oklch layers   */
+  --shadow-lift: oklch(0 0 0 / 0.25) 0 8px 16px;
+  --shadow-credit:
+    oklch(0 0 0 / 0.2) 0 3px 5px -1px, oklch(0 0 0 / 0.14) 0 6px 10px,
+    oklch(0 0 0 / 0.12) 0 1px 18px;
+  --shadow-credit-hover: oklch(0 0 0 / 0.25) 0 6px 12px;
+
+  /* fibonacci spacing */
+  --s1: 8px;
+  --s2: 16px;
+  --s3: 24px;
+  --s5: 40px;
+  --s8: 64px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg),
+    color-mix(in oklab, var(--color-bg), var(--color-accent-violet) 8%)
+  );
+  color: var(--color-text);
+  line-height: 1.618; /* golden ratio  */
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: var(--s3); /* 24px, section rhythm */
+}
+
+.profile-img {
+  width: 128px;
+  height: 128px;
+  border-radius: var(--s1);
+  object-fit: cover;
+  margin-bottom: var(--s2); /* 16px, img to name */
+  border: 1px solid var(--color-border);
+  filter: grayscale(1);
+  transition: all 0.2s ease;
+}
+
+.profile-img:hover {
+  border-color: var(--color-border-strong);
+  filter: grayscale(0);
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: var(--s1); /* 8px */
+}
+
+.bio {
+  color: var(--color-text);
+  letter-spacing: 2.5px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-wrap: pretty;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2); /* 16px */
+}
+
+.link {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--s2) var(--s3); /* 16px | 24px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s2); /* 16px, icon to label */
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); /* ALH ease-out, fast then slow */
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.link:hover {
+  border-color: var(--color-border-strong);
+  background: var(--color-bg-muted);
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+}
+
+.link:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.icon {
+  width: var(--s3); /* 24px, direct glyph size on the svg itself */
+  height: var(--s3);
+  fill: currentColor;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: var(--s2);
+  margin-bottom: var(--s3); /* 24px, section rhythm */
+}
+
+.social {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+.social:hover {
+  border-color: var(--color-border-strong);
+  background: var(--color-brand);
+  color: var(--color-brand-on);
+}
+
+.social .icon {
+  width: 30px;
+  height: 30px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--s3); /* 24px, section rhythm */
+}
+
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 48px;
+  padding: 2px var(--s3);
+  border-radius: 24px;
+  background: var(--color-bg-surface);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: var(--shadow-credit);
+  transition:
+    box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.27s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.footer-credit:hover {
+  box-shadow: var(--shadow-credit-hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  /* 80% on mobile too, straight from ALH */
+  body {
+    width: 80%;
+  }
+}

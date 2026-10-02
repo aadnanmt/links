@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Profile from '../components/Profile.astro'
+import Socials from '../components/Socials.astro'
+import Link from '../components/Link.astro'
+import { siteConfig } from '../data/config'
+---
+
+<Layout {...siteConfig.seo}>
+  <div class="container">
+    <Profile
+      name={siteConfig.profile.name}
+      bio={siteConfig.profile.bio}
+      image={siteConfig.profile.image}
+    />
+    <Socials items={siteConfig.socials} />
+    <div class="links">
+      {siteConfig.buttons.map((button) => (
+        <Link name={button.name} url={button.url} icon={button.icon} />
+      ))}
+    </div>
+    <footer class="footer">
+      <a
+        href="https://github.com/aadnanmt"
+        class="footer-credit"
+        target="_blank"
+        rel="noopener noreferrer"
+        title={`Made by ${siteConfig.profile.name}`}
+      >
+        Made by {siteConfig.profile.name}
+      </a>
+    </footer>
+  </div>
+</Layout>

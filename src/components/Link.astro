@@ -1,0 +1,24 @@
+---
+import type { IconId } from '../data/config'
+
+interface Props {
+  name: string
+  url: string
+  icon: IconId
+}
+
+const { name, url, icon } = Astro.props
+---
+
+<a
+  href={url}
+  class="link"
+  target="_blank"
+  rel="noopener noreferrer"
+  title={name}
+>
+  <svg class="icon">
+    <use href={`/sprite.svg#${icon}`} />
+  </svg>
+  {name}
+</a>
