@@ -38,7 +38,7 @@ body {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 560px;
   width: 100%;
   margin: 0 auto;
 }
@@ -91,7 +91,7 @@ body {
   background: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: 6px;
-  padding: var(--s2) var(--s3); /* 16px | 24px */
+  padding: 12px var(--s3); /* 24px | 12px vert: row lands on the ~44px touch target minimum */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,6 +102,13 @@ body {
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); /* ALH ease-out, fast then slow */
   user-select: none;
   touch-action: manipulation;
+}
+
+.link > span {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .link:hover {
@@ -151,6 +158,118 @@ body {
 .social .icon {
   width: 30px;
   height: 30px;
+}
+
+.nowplaying {
+  margin-top: var(--s3); /* 24px, section rhythm */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* art + text as one centered group, same as .link rows */
+  gap: var(--s2); /* 16px, art to text */
+  padding: var(--s2);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.np-art {
+  position: relative;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  background: var(--color-bg-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.np-art img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.np-note {
+  width: 24px;
+  height: 24px;
+  color: var(--color-text);
+  opacity: 0.5;
+}
+
+.np-live {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+}
+
+.np-live-ping {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--color-accent-green);
+  opacity: 0.4;
+  transform: scale(2);
+}
+
+.np-live-dot {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--color-accent-green);
+  /* beat peak at 50%, mid-flight of the ring's expansion */
+  animation: np-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes np-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .np-live-dot {
+    animation: none;
+  }
+}
+
+.np-meta {
+  display: flex;
+  flex-direction: column;
+  /* flex items refuse to shrink below content without it,
+     the ellipsis below needs the room */
+  min-width: 0;
+}
+
+.np-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.np-track {
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.np-artist {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .footer {

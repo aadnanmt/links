@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import Profile from '../components/Profile.astro'
 import Socials from '../components/Socials.astro'
 import Link from '../components/Link.astro'
+import NowPlaying from '../components/NowPlaying.astro'
 import { siteConfig } from '../data/config'
 ---
 
@@ -19,6 +20,7 @@ import { siteConfig } from '../data/config'
         <Link name={button.name} url={button.url} icon={button.icon} />
       ))}
     </div>
+    <NowPlaying />
     <footer class="footer">
       <a
         href="https://github.com/aadnanmt"
