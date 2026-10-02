@@ -44,8 +44,8 @@ export const siteConfig: SiteConfig = {
     author: 'Adnan Slamet Wibowo',
   },
   profile: {
-    name: 'Nant',
-    bio: 'dev & tech minimalist',
+    name: '@aadnanmt',
+    bio: 'Dev & Tech Minimalist',
     image: '/img/me-act.webp',
   },
   socials: [
@@ -55,7 +55,7 @@ export const siteConfig: SiteConfig = {
       url: 'https://codeberg.org/aadnanmt',
       icon: 'codeberg',
     },
-    { name: 'Telegram', url: 'https://t.me/nan_simple', icon: 'telegram' },
+    { name: 'Telegram', url: 'https://t.me/aadnnmt', icon: 'telegram' },
     {
       name: 'Discord',
       url: 'https://discord.com/users/1155470881183760525',
@@ -69,12 +69,12 @@ export const siteConfig: SiteConfig = {
   ],
   buttons: [
     {
-      name: 'My Digital garden',
+      name: 'Explore My Digital garden',
       url: 'https://root.nanoolabs.dev/explore',
       icon: 'garden',
     },
     {
-      name: 'Visit Nanoo Labs',
+      name: 'Nanoo Labs on Github',
       url: 'https://github.com/nanoolabs',
       icon: 'nanoo',
     },
