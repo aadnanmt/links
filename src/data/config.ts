@@ -45,7 +45,7 @@ export const siteConfig: SiteConfig = {
   },
   profile: {
     name: '@aadnanmt',
-    bio: 'Dev & Tech Minimalist',
+    bio: 'A Minimalist Dev & Tech Nerd',
     image: '/img/me-act.webp',
   },
   socials: [
