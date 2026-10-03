@@ -69,26 +69,12 @@ body {
 }
 
 .name {
-  /* flex: whitespace-only text node generate no flex items,
-* so prettier forcing a newline between name and 
-* badge never render a gap */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.15em;
   font-family: var(--font-mono);
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2; /* display text stay tight, not the body rhythm */
   letter-spacing: 0.05em; /* relative, scale with font-size (was a fixed 2px) */
   margin-bottom: var(--s1); /* 8px */
-}
-
-.verified {
-  width: 1em;
-  height: 1em;
-  flex-shrink: 0;
-  color: var(--color-accent-blue);
 }
 
 .bio {
