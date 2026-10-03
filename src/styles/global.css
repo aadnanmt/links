@@ -55,7 +55,7 @@ body {
 .profile-img {
   width: 128px;
   height: 128px;
-  border-radius: var(--s1);
+  border-radius: var(--s8);
   object-fit: cover;
   margin-bottom: var(--s2); /* 16px, img to name */
   border: 1px solid var(--color-border);
@@ -159,8 +159,8 @@ body {
 }
 
 .social {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border: 1px solid var(--color-border);
   border-radius: 6px;
   background: var(--color-bg-surface);
@@ -338,6 +338,14 @@ body {
 @media (max-width: 768px) {
   /* 80% on mobile too, straight from ALH */
   body {
-    width: 80%;
+    width: 85%;
+  }
+  .social {
+    width: 45px;
+    height: 45px;
+  }
+  .social .icon {
+    width: 25px;
+    height: 25px;
   }
 }
