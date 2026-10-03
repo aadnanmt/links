@@ -5,9 +5,11 @@ import Socials from '../components/Socials.astro'
 import Link from '../components/Link.astro'
 import NowPlaying from '../components/NowPlaying.astro'
 import { siteConfig } from '../data/config'
+
+export const prerender = true
 ---
 
-<Layout {...siteConfig.seo}>
+<Layout {...siteConfig.seo} image={siteConfig.profile.image}>
   <div class="container">
     <Profile
       name={siteConfig.profile.name}
