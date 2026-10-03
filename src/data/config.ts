@@ -2,7 +2,6 @@ export interface SiteConfig {
   seo: {
     title: string
     description: string
-    url: string
     author: string
   }
   profile: {
@@ -41,7 +40,6 @@ export const siteConfig: SiteConfig = {
   seo: {
     title: 'Adnan Slamet Wibowo | Link in Bio',
     description: 'Adnan Slamet Wibowo is a dev & tech minimalist',
-    url: 'https://nanoolabs.dev/nt',
     author: 'Adnan Slamet Wibowo',
   },
   profile: {

@@ -14,6 +14,8 @@ if (isProd) {
 
 // https://astro.build/config
 export default defineConfig({
+  // Astro.url base during prerender
+  site: process.env.SITE_URL,
   output: isProd ? 'server' : 'static',
   adapter,
   fonts: [
