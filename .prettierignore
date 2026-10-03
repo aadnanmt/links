@@ -1,6 +1,5 @@
 dist/
 node_modules/
-.github/
 .astro/
 .wrangler/
 pnpm-lock.yaml
