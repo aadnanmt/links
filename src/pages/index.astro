@@ -8,29 +8,29 @@ import { siteConfig } from '../data/config'
 ---
 
 <Layout {...siteConfig.seo} image={siteConfig.profile.image}>
-  <div class="container">
-    <Profile
-      name={siteConfig.profile.name}
-      bio={siteConfig.profile.bio}
-      image={siteConfig.profile.image}
-    />
-    <Socials items={siteConfig.socials} />
-    <div class="links">
-      {siteConfig.buttons.map((button) => (
-        <Link name={button.name} url={button.url} icon={button.icon} />
-      ))}
-    </div>
-    <NowPlaying />
-    <footer class="footer">
-      <a
-        href="https://github.com/aadnanmt"
-        class="footer-credit"
-        target="_blank"
-        rel="noopener noreferrer"
-        title={`Made by ${siteConfig.profile.name}`}
-      >
-        Made by {siteConfig.profile.name}
-      </a>
-    </footer>
-  </div>
+	<div class="container">
+		<Profile
+			name={siteConfig.profile.name}
+			bio={siteConfig.profile.bio}
+			image={siteConfig.profile.image}
+		/>
+		<Socials items={siteConfig.socials} />
+		<div class="links">
+			{siteConfig.buttons.map((button) => (
+				<Link name={button.name} url={button.url} icon={button.icon} />
+			))}
+		</div>
+		<NowPlaying />
+		<footer class="footer">
+			<a
+				href="https://github.com/aadnanmt"
+				class="footer-credit"
+				target="_blank"
+				rel="noopener noreferrer"
+				title={`Made by ${siteConfig.profile.name}`}
+			>
+				Made by {siteConfig.profile.name}
+			</a>
+		</footer>
+	</div>
 </Layout>
