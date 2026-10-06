@@ -1,4 +1,4 @@
 export default {
-	files: ['src/**/*.css'],
-	extends: ['stylelint-config-standard'],
+  files: ['src/**/*.css'],
+  extends: ['stylelint-config-standard'],
 }

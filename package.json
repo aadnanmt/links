@@ -1,38 +1,38 @@
 {
-	"name": "nant",
-	"type": "module",
-	"version": "0.0.1",
-	"packageManager": "pnpm@12.8.1",
-	"engines": {
-		"node": ">=22.12.0"
-	},
-	"scripts": {
-		"dev": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"prepare": "husky",
-		"format": "prettier --write .",
-		"format:check": "prettier --check .",
-		"format:changed": "git diff --name-only --diff-filter=d HEAD -z | xargs -0 -r prettier --write --ignore-unknown",
-		"lint:css": "stylelint \"src/**/*.css\"",
-		"lint:css:fix": "stylelint \"src/**/*.css\" --fix"
-	},
-	"dependencies": {
-		"@astrojs/cloudflare": "^13.7.0",
-		"@nlbs/css": "1.0.0",
-		"astro": "^6.1.7"
-	},
-	"devDependencies": {
-		"husky": "^9.1.7",
-		"lint-staged": "^17.6.0",
-		"prettier": "^3.9.9",
-		"prettier-plugin-astro": "^1.1.0",
-		"stylelint": "^17.16.0",
-		"stylelint-config-standard": "^40.0.0"
-	},
-	"lint-staged": {
-		"*": "prettier --ignore-unknown --write",
-		"*.css": "stylelint --fix"
-	}
+  "name": "nant",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@12.8.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "format:check": "prettier --cache --check .",
+    "format:changed": "git diff --name-only --diff-filter=d HEAD -z | xargs -0 -r prettier --write --ignore-unknown",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:css:fix": "stylelint \"src/**/*.css\" --fix"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^13.7.0",
+    "@nlbs/css": "1.0.0",
+    "astro": "^6.1.7"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0",
+    "stylelint": "^17.16.0",
+    "stylelint-config-standard": "^40.0.0"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write",
+    "*.css": "stylelint --fix"
+  }
 }

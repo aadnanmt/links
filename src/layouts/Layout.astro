@@ -5,11 +5,11 @@ import '@nlbs/css'
 import '../styles/global.css'
 
 interface Props {
-	title: string
-	description: string
-	author: string
-	image: string
-	noindex?: boolean
+  title: string
+  description: string
+  author: string
+  image: string
+  noindex?: boolean
 }
 
 const { title, description, author, image, noindex = false } = Astro.props
@@ -17,41 +17,41 @@ const { title, description, author, image, noindex = false } = Astro.props
 
 <!doctype html>
 <html lang="en" data-theme="dark">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<Font cssVariable="--font-sans" preload />
-		<Font cssVariable="--font-mono" preload />
-		<!-- FAVICON WIP: still in development
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <Font cssVariable="--font-sans" preload />
+    <Font cssVariable="--font-mono" preload />
+    <!-- FAVICON WIP: still in development
     <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<meta name="generator" content={Astro.generator} />
+    <meta name="generator" content={Astro.generator} />
 
-		<!-- Primary Meta Tags -->
-		<title>{title}</title>
-		<meta name="title" content={title} />
-		<meta name="description" content={description} />
-		<meta name="author" content={author} />
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={author} />
 
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.url} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={`${Astro.url.origin}${image}`} />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${Astro.url.origin}${image}`} />
 
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={Astro.url} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content={`${Astro.url.origin}${image}`} />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={`${Astro.url.origin}${image}`} />
 
-		<!-- Additional SEO -->
-		<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
-		<meta name="language" content="English" />
-		<meta name="revisit-after" content="7 days" />
-	</head>
-	<body>
-		<slot />
-	</body>
+    <!-- Additional SEO -->
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>

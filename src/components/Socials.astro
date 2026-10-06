@@ -2,25 +2,25 @@
 import type { IconId } from '../data/config'
 
 interface Props {
-	items: { name: string; url: string; icon: IconId }[]
+  items: { name: string; url: string; icon: IconId }[]
 }
 
 const { items } = Astro.props
 ---
 
 <div class="socials">
-	{items.map((social) => (
-		<a
-			href={social.url}
-			class="social"
-			target="_blank"
-			rel="noopener noreferrer"
-			aria-label={social.name}
-			title={social.name}
-		>
-			<svg class="icon">
-				<use href={`/sprite.svg#${social.icon}`} />
-			</svg>
-		</a>
-	))}
+  {items.map((social) => (
+    <a
+      href={social.url}
+      class="social"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={social.name}
+      title={social.name}
+    >
+      <svg class="icon">
+        <use href={`/sprite.svg#${social.icon}`} />
+      </svg>
+    </a>
+  ))}
 </div>
