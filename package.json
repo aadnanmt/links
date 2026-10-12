@@ -10,6 +10,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "node -e \"const f='dist/server/wrangler.json',fs=require('fs'),c=JSON.parse(fs.readFileSync(f));c.observability={enabled:false};fs.writeFileSync(f,JSON.stringify(c))\" && wrangler deploy --config dist/server/wrangler.json",
     "astro": "astro",
     "prepare": "husky",
     "format": "prettier --write .",
