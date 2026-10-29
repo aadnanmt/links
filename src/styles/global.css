@@ -35,7 +35,7 @@ body {
   background: linear-gradient(
     180deg,
     var(--color-bg),
-    color-mix(in oklab, var(--color-bg), var(--color-accent-violet) 8%)
+    color-mix(in oklab, var(--color-bg), var(--color-accent-violet) 20%)
   );
   color: var(--color-text);
   line-height: 1.618; /* golden ratio, inside the 1.4-1.7 comfortable reading range */
