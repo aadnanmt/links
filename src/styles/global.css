@@ -228,10 +228,10 @@ body {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: var(--color-accent-green);
+  background: var(--color-brand);
 
   /* beat peak at 50%, mid-flight of the ring's expansion */
-  animation: np-pulse 1.6s ease-in-out infinite;
+  animation: np-pulse 1.6s ease-in-out infinite !important;
 }
 
 @keyframes np-pulse {
@@ -245,8 +245,21 @@ body {
   }
 }
 
+@keyframes np-ping {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .np-live-dot {
+  .np-live-dot,
+  .np-live-ping {
     animation: none;
   }
 }
