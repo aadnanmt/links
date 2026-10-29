@@ -44,8 +44,8 @@ export const siteConfig: SiteConfig = {
   },
   profile: {
     name: '@aadnanmt',
-    bio: 'A Minimalist Dev & Tech Nerd',
-    image: '/img/me-act.webp',
+    bio: 'A minimalist dev & tech nerd',
+    image: 'https://cdn.nanoolabs.dev/assets/identity/me-act.webp',
   },
   socials: [
     { name: 'GitHub', url: 'https://github.com/aadnanmt', icon: 'github' },
@@ -68,30 +68,34 @@ export const siteConfig: SiteConfig = {
   ],
   buttons: [
     {
-      name: 'Explore My Digital garden',
+      name: 'Exploring my digital garden',
       url: 'https://root.nanoolabs.dev/explore',
       icon: 'garden',
     },
     {
-      name: 'Check My Niri Dotfiles',
+      name: 'Access my Niri dotfiles',
       url: 'https://github.com/aadnanmt/niri-dotfiles',
       icon: 'github',
     },
     {
-      name: 'Nanoo Labs on Github',
+      name: 'Nanoo Labs on GitHub',
       url: 'https://github.com/nanoolabs',
       icon: 'nanoo',
     },
     {
-      name: 'Play Roblox With Me',
+      name: 'Play Roblox with me',
       url: 'https://www.roblox.com/share?code=79ca89d40350d64385b3b697582c5be3&type=Profile&source=ProfileShare&stamp=1790935992778',
       icon: 'roblox',
     },
     {
-      name: 'Support Me on Ko-fi',
+      name: 'Fund me on Ko-fi',
       url: 'https://ko-fi.com/aadnanmt',
       icon: 'kofi',
     },
-    { name: 'Send an Email', url: 'mailto:adnan@nanoolabs.dev', icon: 'mail' },
+    {
+      name: 'Send an email',
+      url: 'mailto:adnan@nanoolabs.dev',
+      icon: 'mail',
+    },
   ],
 }
