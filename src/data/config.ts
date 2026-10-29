@@ -45,7 +45,7 @@ export const siteConfig: SiteConfig = {
   profile: {
     name: '@aadnanmt',
     bio: 'A minimalist dev & tech nerd',
-    image: 'https://cdn.nanoolabs.dev/assets/identity/me-act.webp',
+    image: '/img/me-act.webp',
   },
   socials: [
     { name: 'GitHub', url: 'https://github.com/aadnanmt', icon: 'github' },
